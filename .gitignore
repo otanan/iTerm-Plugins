@@ -34,4 +34,7 @@ build
 _archive
 
 #------------- Project-specific settings -------------#
+# Ignore the demo videos
+res
+# User saved presets
 itheme/saved_presets.txt

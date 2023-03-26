@@ -29,11 +29,10 @@
 * [Contact](#contact)
 * [Acknowledgments](#acknowledgments) -->
 
-## Demos
 
 ### iTheme
 
-
+https://user-images.githubusercontent.com/6320907/227763351-661866f1-95ae-44bd-b2a9-62f9ac00fc45.mov
 
 <!-- ### iTerm Build -->
 
@@ -47,10 +46,18 @@
 3. Follow the installation instructions for the plugin of choice.
 
 ### iTheme
-1. Alias the command to run this script
+1. Go to [iTerm2 Color Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) repository and follow their instructions to download all available or desired color schemes.
+2. Import them into iTerm.
+3. Alias the command to run this script
 ```bash
 alias itheme=python3 path/to/itheme.py
 ```
+4. (Optional) Add the following line to your Send Text at Start command to have it generate each time a new window is opened.
+```bash
+clear && itheme --auto
+```
+The ```bash --auto``` flag is to instruct the program that this command was run automatically and should not always be listened to. In this case it avoids changing the theme each time a new _tab_ is opened. Instead it only changes with new _windows_.
+
 
 <!-- ### iTerm Build -->
 
