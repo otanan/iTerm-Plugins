@@ -29,21 +29,34 @@
 * [Contact](#contact)
 * [Acknowledgments](#acknowledgments) -->
 
+## Demos
+
+### iTheme
+
+
+
+<!-- ### iTerm Build -->
+
+
+<!-- ### Wallp(aper) -->
 
 ## Installation
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+1. Install the [iTermLink repo][iTermLink].
+2. Clone this repo.
+3. Follow the installation instructions for the plugin of choice.
 
-1. First step
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Import the package
-   ```python
-   import ytlink
-   ```
+### iTheme
+1. Alias the command to run this script
+```bash
+alias itheme=python3 path/to/itheme.py
+```
+
+<!-- ### iTerm Build -->
+
+
+<!-- ### Wallp(aper) -->
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -51,24 +64,7 @@ To get a local copy up and running follow these simple example steps.
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-```python
-import numpy as np
-import stp
-# Dimensionless, time-dependent parameter for self assembly matrix
-alpha = lambda t : np.cos(t) + 2
-W = stp.self_assembly_rate_matrix(alpha)
-
-# The initial matrix
-print(W(0))
-# [[-2.  3.  9.]
-# [ 1. -3.  0.]
-# [ 1.  0. -9.]]
-
-# A later matrix
-print(W(1))
-# [[-2.          2.54030231  6.45313581]
-# [ 1.         -2.54030231  0.        ]
-# [ 1.          0.         -6.45313581]]
+```bash
 ```
 
 
@@ -89,4 +85,4 @@ Created by [Jonathan Delgado](https://jdelgado.net/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- [Notion Roadmap]: https://otanan.notion.site/ -->
+[iTermLink]: https://github.com/otanan/iTermLink
