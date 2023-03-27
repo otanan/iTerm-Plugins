@@ -37,15 +37,11 @@
 
 https://user-images.githubusercontent.com/6320907/227763351-661866f1-95ae-44bd-b2a9-62f9ac00fc45.mov
 
+<!-- ## iTerm Build -->
 
 ## Wallp
 
-
-
-<!-- ### iTerm Build -->
-
-
-<!-- ### Wallp(aper) -->
+https://user-images.githubusercontent.com/6320907/227876126-fee2b01c-7e6c-4464-b53d-8ee4ac8c964b.mov
 
 ## Installation
 
@@ -93,11 +89,6 @@ Run ```randtheme``` to change themes.
 
 ### Wallp(aper)
 Run ```wallp -reveal``` to show the current wallpaper in Finder, ```delpaper``` will prompt for deleting the wallpaper.
-
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-```bash
-```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
