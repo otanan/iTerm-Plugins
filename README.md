@@ -17,6 +17,9 @@
     ·<a href="https://otanan.notion.site/iTheme-f8b8eff9c31449c9a56d6a6c17ddf63e"><strong>
         Notion Roadmap for iTheme »
     </strong></a>
+    ·<a href="https://otanan.notion.site/Wallpaper-manager-692394015bfc4226af561abef4321b23"><strong>
+        Notion Roadmap for Wallp »
+    </strong></a>
   </p>
 </div>
 
@@ -30,9 +33,14 @@
 * [Acknowledgments](#acknowledgments) -->
 
 
-### iTheme
+## iTheme
 
 https://user-images.githubusercontent.com/6320907/227763351-661866f1-95ae-44bd-b2a9-62f9ac00fc45.mov
+
+
+## Wallp
+
+
 
 <!-- ### iTerm Build -->
 
@@ -48,34 +56,49 @@ https://user-images.githubusercontent.com/6320907/227763351-661866f1-95ae-44bd-b
 ### iTheme
 1. Go to [iTerm2 Color Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) repository and follow their instructions to download all available or desired color schemes.
 2. Import them into iTerm.
-3. Alias the command to run this script
+3. Alias the command to run this script from any place in terminal
 ```bash
 alias itheme=python3 path/to/itheme.py
 ```
-4. (Optional) Add the following line to your Send Text at Start command to have it generate each time a new window is opened.
+4. **(Optional)** Alias some additional commands to make running the script with flags easier
+```bash
+alias deltheme='itheme --del'
+alias numtheme='itheme --num'
+```
+5. **(Optional)** Add the following line to your Send Text at Start command to have it generate each time a new window is opened.
 ```bash
 clear && itheme --auto
 ```
-The ```bash --auto``` flag is to instruct the program that this command was run automatically and should not always be listened to. In this case it avoids changing the theme each time a new _tab_ is opened. Instead it only changes with new _windows_.
+The ```--auto``` flag is to instruct the program that this command was run automatically and should not always be listened to. In this case it avoids changing the theme each time a new _tab_ is opened. Instead it only changes with new _windows_.
 
 
 <!-- ### iTerm Build -->
 
 
-<!-- ### Wallp(aper) -->
-
-
+### Wallp(aper)
+Alias the command to run this script from any place in terminal
+```bash
+alias wallp='python3 path/to/wallp.py'
+alias delpaper='wallp -delete'
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 
+### iTheme
+Run ```randtheme``` to change themes.
+
+<!-- ### iTerm Build -->
+
+### Wallp(aper)
+Run ```wallp -reveal``` to show the current wallpaper in Finder, ```delpaper``` will prompt for deleting the wallpaper.
+
+
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 ```bash
 ```
 
-
-_For more examples, please refer to the [Documentation]._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
