@@ -95,7 +95,7 @@ Run ```wallp -reveal``` to show the current wallpaper in Finder, ```delpaper``` 
 
 ## Roadmap
 
-Refer to the [Notion Roadmap] for future features and the state of the project.
+Refer to the [iTheme Roadmap] or [Wallp Roadmap] for future features and the state of the projects.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -107,3 +107,5 @@ Created by [Jonathan Delgado](https://jdelgado.net/).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [iTermLink]: https://github.com/otanan/iTermLink
+[iTheme Roadmap]: https://otanan.notion.site/iTheme-f8b8eff9c31449c9a56d6a6c17ddf63e
+[Wallp Roadmap]: https://otanan.notion.site/Wallpaper-manager-692394015bfc4226af561abef4321b23
