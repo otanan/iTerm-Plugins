@@ -16,10 +16,10 @@ from PIL import Image
 from itermlink.tools.console import *
 import itermlink
 #------------- Fields -------------#
-__version__ = 0.11
+__version__ = '0.0.11'
 # Database holding current wallpaper filename
 WALLPAPER_DB = Path.home() / 'Library/Application Support/Dock/desktoppicture.db'
-WALLPAPER_FOLDER = Path.home() / 'Drive/Wallpapers'
+WALLPAPER_FOLDER = Path.home() / 'Drive/Wallpapers/Laptop'
 #======================== Helper ========================#
 
 
@@ -43,6 +43,10 @@ def _init_arguments():
     parser.add_argument(
         '-reveal', help='Reveal the wallpaper file in Finder.',
         action='store_true'
+    )
+    # Which screen to take the wallpaper from
+    parser.add_argument(
+        '-hist', type=int, default=0, help='An integer describing which previous wallpaper to choose. Defaults to 0 indicating the current wallpaper. Useful when trying to delete wallpapers while using multiple screens.'
     )
     # Provide an image path to prompt user for deletion
     parser.add_argument('--path', help='Absolute path to wallpaper file.')
@@ -85,15 +89,15 @@ def prompt_deletion(image_path):
         print('[success]Wallpaper deletion canceled[/].')
 
 
-def current_wallpaper_path():
+def current_wallpaper_path(hist=0):
     """ Get the absolute path to the current wallpaper. """
     # Establish connection to database
     sql_connection = sqlite3.connect(WALLPAPER_DB)
     cursor = sql_connection.cursor()
     
     # Get the current wallpaper fname
-    cursor.execute('SELECT * FROM data ORDER BY rowID DESC LIMIT 1;')
-    fname = cursor.fetchall()[0][0]
+    cursor.execute(f'SELECT * FROM data ORDER BY rowID DESC LIMIT {hist + 1};')
+    fname = cursor.fetchall()[hist][0]
     # Close the database connections
     cursor.close()
     sql_connection.close()
@@ -120,19 +124,20 @@ def main():
     args = _init_arguments()
     # No path was provided, we must get it and show the image in reference
     if args.path is None:
-        path = current_wallpaper_path()
+        path = current_wallpaper_path(args.hist)
         # Show wallpaper in consideration
         show_image_in_terminal(path)
         
         # iTerm took control to show image in terminal, we need to make 
             # recursive call, to relinquish control back to the script itself
         command = 'wallp '
-        # Add flags
+        # Add flags & path
         command += '-res ' * args.res
         command += '-reveal ' * args.reveal
         command += '-delete ' * args.delete
+        command +=  f'--path="{path}"'
         # Make call
-        itermlink.run_command_on_active_sess(command + f' --path="{path}"')
+        itermlink.run_command_on_active_sess(command)
         # The recursive call will take control of the script
         sys.exit()
     else:

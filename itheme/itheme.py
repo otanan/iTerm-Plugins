@@ -66,7 +66,6 @@ async def report_numbers(connection):
     )
 
 
-
 #======================== Entry ========================#
 
 
@@ -81,7 +80,6 @@ async def main(connection):
         # Auto flag cannot be true if theme is to be deleted
         flags['auto'] = False
         # Continue with running script to get a new preset
-
 
     if flags['clear']: os.system('clear')
 
@@ -101,7 +99,7 @@ async def main(connection):
     async def main_loop(connection):
         """ The main script loop. """
         preset_name = await random_preset(connection)
-        await itermlink.change_preset(connection, preset_name)
+        await itermlink.change_all_presets(connection, preset_name)
 
         # Prompt user to see if scheme should be kept
         prompt = f'Keep new color preset: [emph]{preset_name}[/]?'

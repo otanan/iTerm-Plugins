@@ -5,7 +5,7 @@
 <!-- Header -->
 <h2 align="center">iTerm Plugins</h2>
   <p align="center">
-    Various small plugins written for iTerm2 using <a href="https://github.com/otanan/iTermLink">iTermLink</a> library.
+    Various small plugins written for iTerm2 using my <a href="https://github.com/otanan/iTermLink">iTermLink</a> library.
     <br />
     <br />
     Status: <em>in progress</em>
